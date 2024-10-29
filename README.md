@@ -10,7 +10,7 @@ Processes with Parent Process, Command Line and User for a Host:
 •	Typically set timeframe to a small window, emulating “viewing running processes”
 ```
 //Show Process and Parent Process with cmdline and User Name...edit endpoint.name = 'workstation1' – case sensitive!
-endpoint.name  = 'Cor-dc2' 
+endpoint.name  = 'Your-dc2' 
 | group eventcount = count() by endpoint.name, src.process.name , src.process.cmdline, user.name  
 | columns endpoint.name, src.process.name , src.process.cmdline, user.name, eventcount
 | sort -eventcount
